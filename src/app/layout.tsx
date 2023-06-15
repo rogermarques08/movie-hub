@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 
@@ -26,7 +27,10 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body className={`${bebasNeue.className} bg-red-400`}>{children}</body>
+      <body className={`${bebasNeue.className} bg-[#04131a]`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
