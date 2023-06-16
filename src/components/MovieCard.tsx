@@ -6,7 +6,7 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie }: MovieCardProps) {
-    console.log(movie)
+    
     return (
         <li className="flex flex-col p-2 w-[150px]">
             <Image
@@ -18,7 +18,6 @@ export default function MovieCard({ movie }: MovieCardProps) {
                 className="rounded-2xl"
             />
             <p className="truncate w-full text-start text-white font-bold">{movie.title}</p>
-            {/* <p className="text-start text-white">{movie.release_date}</p> */}
         </li>
     )
 }
