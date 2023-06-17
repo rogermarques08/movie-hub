@@ -1,7 +1,7 @@
 import { Antonio } from 'next/font/google';
 import Link from "next/link";
 
-const antonio = Antonio({
+export const antonio = Antonio({
     weight: ['400'],
     subsets: ['latin']
 }) 

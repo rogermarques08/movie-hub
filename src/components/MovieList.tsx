@@ -1,4 +1,4 @@
-import getData, { FilmData } from "@/api/getData"
+import getData, { FilmData, FilmResponse } from "@/api/getData"
 import MovieCard from "./MovieCard"
 
 interface MoviesList {
@@ -8,7 +8,7 @@ interface MoviesList {
 export default async function MovieList({title, url}: MoviesList){
     let data: FilmData[] = []
     try {
-        data = await getData(url)
+        data = (await getData<FilmResponse>(url)).results
     } catch (error) {
         throw new Error('Failed to fetch data')
     }
