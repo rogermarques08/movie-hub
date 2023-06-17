@@ -1,6 +1,6 @@
 import 'dotenv/config';
 
-export type FilmData = {
+export interface FilmData {
     adult: boolean,
     backdrop_path: string,
     genre_ids: number[],
@@ -17,13 +17,21 @@ export type FilmData = {
     vote_count: number
 }
 
-type FilmResponse = {
+export interface FilmDataDetails extends FilmData {
+    tagline: string
+    genres: [{
+        id: number,
+        name: string
+    }]
+}
+
+export interface FilmResponse {
     page: number,
     results: FilmData[]
 
 }
 
-export default async function getData(url: string): Promise<FilmData[]> {
+export default async function getData<T>(url: string): Promise<T> {
     const options = {
         method: 'GET',
         headers: {
@@ -34,8 +42,8 @@ export default async function getData(url: string): Promise<FilmData[]> {
     };
 
     const response = await fetch(url, options)
-    const data: FilmResponse = await response.json()
+    const data: T = await response.json()
 
 
-    return data.results;
+    return data;
 }
