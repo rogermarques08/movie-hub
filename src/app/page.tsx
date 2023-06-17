@@ -1,10 +1,10 @@
+import Banner from "@/components/Banner";
 import GlobalMovieList from "@/components/GlobalMovieList";
-import MainMovie from "@/components/MainMovie";
 
 export default function Home() {
   return (
     <>
-      <MainMovie />
+      <Banner />
       <GlobalMovieList />
     </>
   )

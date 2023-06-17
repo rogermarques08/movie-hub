@@ -17,7 +17,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
                 priority
                 className="rounded-2xl"
             />
-            <p className="truncate w-full text-start text-white font-bold">{movie.title}</p>
+            {/* <p className="truncate w-full text-start text-white font-bold">{movie.title}</p> */}
         </li>
     )
 }
