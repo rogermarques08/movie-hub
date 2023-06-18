@@ -22,13 +22,26 @@ export interface FilmDataDetails extends FilmData {
     genres: [{
         id: number,
         name: string
-    }]
+    }],
+    credits: string
 }
 
 export interface FilmResponse {
     page: number,
     results: FilmData[]
 
+}
+
+export interface CastData {
+    id: number,
+    original_name: string,
+    character: string
+    profile_path: string,
+}
+
+export interface CastResponse {
+    id: number,
+    cast: CastData[]
 }
 
 export default async function getData<T>(url: string): Promise<T> {

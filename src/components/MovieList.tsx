@@ -7,6 +7,7 @@ interface MoviesList {
 }
 export default async function MovieList({title, url}: MoviesList){
     let data: FilmData[] = []
+    
     try {
         data = (await getData<FilmResponse>(url)).results
     } catch (error) {

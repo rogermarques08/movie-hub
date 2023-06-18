@@ -1,5 +1,6 @@
 import getData, { FilmDataDetails } from "@/api/getData"
 import BannerImage from "@/components/BannerImage"
+import CastList from "@/components/CastList"
 import Details from "@/components/Details"
 
 export default async function MovieDetails({ params }: { params: { slug: string } }) {
@@ -9,6 +10,7 @@ export default async function MovieDetails({ params }: { params: { slug: string 
         <main>
             <BannerImage url={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
             <Details movie={movie} />
+            <CastList url={`https://api.themoviedb.org/3/movie/${movie.id}/credits?language=pt-BR`}/>
         </main>
     )
 }
