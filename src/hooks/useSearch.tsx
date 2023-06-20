@@ -11,12 +11,7 @@ export default function useSearch() {
     async function getSearch() {
         getData<FilmResponse>(`https://api.themoviedb.org/3/search/multi?query=${search}&include_adult=false&language=pt-BR&page=1&api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
             .then((data) => {
-
-                console.log(data.results)
                 const filteredResults = data.results?.filter((item) => item.media_type !== 'person')
-                console.log(filteredResults);
-
-
                 setMovies(filteredResults)
             })
     }
