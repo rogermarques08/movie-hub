@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import SearchProvider from '@/context/SeachContext'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 
@@ -28,8 +29,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${bebasNeue.className} bg-[#04131a]`}>
-        <Header />
-        {children}
+        <SearchProvider>
+          <Header />
+          {children}
+        </SearchProvider>
       </body>
     </html>
   )
