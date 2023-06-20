@@ -18,7 +18,7 @@ export default async function MovieList({title, url}: MoviesList){
         <>
         <h1 className="text-2xl text-white font-bold">{title}</h1>
         <ul className="flex overflow-x-scroll gap-[15px] mb-[30px]">
-            {data.map((movie) => (
+            {data?.map((movie) => (
                     <MovieCard movie={movie} key={movie.id}/>
             ))}
         </ul>

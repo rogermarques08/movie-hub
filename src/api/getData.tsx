@@ -1,10 +1,23 @@
 import 'dotenv/config';
 
+// async function getSearch() {
+//     getData<FilmResponse>(`https://api.themoviedb.org/3/search/multi?query=${search}&include_adult=false&language=pt-BR&page=1`)
+//         .then((data) => {
+//             console.log(data.results)
+//             const filteredResults = data.results?.filter((item) => item.media_type !== 'person') 
+//             console.log(filteredResults);
+            
+
+//             setMovie(data.results)
+//         })
+// }
+
 export interface FilmData {
     adult: boolean,
     backdrop_path: string,
     genre_ids: number[],
     id: number,
+    media_type: string
     original_language: string,
     original_title: string,
     overview: string
@@ -50,7 +63,7 @@ export default async function getData<T>(url: string): Promise<T> {
         headers: {
             accept: 'application/json',
             Authorization:
-                `Bearer ${process.env.API_KEY}`,
+                `Bearer ${process.env.API_TOKEN}`,
         },
     };
 
