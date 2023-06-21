@@ -8,7 +8,6 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie, type }: MovieCardProps) {
-    console.log(type)
     return (
         <li className="flex flex-col p-2 w-[150px]">
             <Link href={`/media/${type}/${movie.id}`}>
