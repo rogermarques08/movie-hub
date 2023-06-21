@@ -4,9 +4,10 @@ import CastList from "@/components/CastList"
 import Details from "@/components/Details"
 import RecomendationList from "@/components/RecomendationList"
 
-export default async function MovieDetails({ params }: { params: { slug: string } }) {
-    const movie = await getData<FilmDataDetails>(`https://api.themoviedb.org/3/movie/${params.slug}?language=pt-BR`)
-
+export default async function MovieDetails({ params }: { params: { slug: string[] } }) {
+    const slugs = params.slug
+    const movie = await getData<FilmDataDetails>(`https://api.themoviedb.org/3/${slugs[0]}/${slugs[1]}?language=pt-BR`)
+    
     return (
         <main>
             <BannerImage url={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />

@@ -4,8 +4,9 @@ import MovieCard from "./MovieCard"
 interface MoviesList {
     title: string
     url: string
+    type: string
 }
-export default async function MovieList({title, url}: MoviesList){
+export default async function MovieList({title, url, type}: MoviesList){
     let data: FilmData[] = []
     
     try {
@@ -19,7 +20,7 @@ export default async function MovieList({title, url}: MoviesList){
         <h1 className="text-2xl text-white font-bold">{title}</h1>
         <ul className="flex overflow-x-scroll gap-[15px] mb-[30px]">
             {data?.map((movie) => (
-                    <MovieCard movie={movie} key={movie.id}/>
+                    <MovieCard movie={movie} key={movie.id} type={type}/>
             ))}
         </ul>
         </>
