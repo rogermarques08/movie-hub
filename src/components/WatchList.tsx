@@ -17,7 +17,7 @@ export default function WatchList({watchList} : WatchListProps){
                                 width={120}
                                 height={170}
                                 priority
-                                className="rounded-2xl"
+                                className="rounded-2xl fade-intro"
                             />
                         </Link>
                     </li>

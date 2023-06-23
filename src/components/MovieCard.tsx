@@ -9,7 +9,7 @@ interface MovieCardProps {
 
 export default function MovieCard({ movie, type }: MovieCardProps) {
     return (
-        <li className="flex flex-col p-2 w-[150px]">
+        <li className="fade-intro flex flex-col p-2 w-[150px]">
             <Link href={`/media/${type}/${movie.id}`}>
                 <Image
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
