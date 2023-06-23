@@ -1,19 +1,19 @@
 "use client"
-import useWishList, { WishList } from "@/hooks/useWishList"
+import useWatchList, { WatchList } from "@/hooks/useWatchList"
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs"
 
 interface WishListBtnnProps {
-    movie: WishList
+    movie: WatchList
 }
 
 export default function WishListBtn({ movie }: WishListBtnnProps) {
-    const { addWishList, isOnList, removeWishList } = useWishList()
+    const { addWatchList,watchList, isOnList, removeWatchList } = useWatchList()
 
     return (
         <>
-            {isOnList(movie.id) ? (
+            {watchList.some((item) => item.id === movie.id) ? (
                 <button
-                    onClick={() => removeWishList(movie.id)}
+                    onClick={() => removeWatchList(movie.id)}
                     className="flex items-center gap-3 rounded-md p-2 mt-3 font-semibold bg-red-600"
                 >
                     <BsBookmarkFill />
@@ -22,7 +22,7 @@ export default function WishListBtn({ movie }: WishListBtnnProps) {
                 </button>
             ) : (
                 <button
-                    onClick={() => addWishList(movie)}
+                    onClick={() => addWatchList(movie)}
                     className="flex items-center gap-3 rounded-md p-2 mt-3 font-semibold bg-green-700"
                 >
                     <BsBookmark />

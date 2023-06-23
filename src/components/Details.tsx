@@ -20,7 +20,7 @@ export default function Details(props: DetailsProps) {
                 <h3 className={`${antonio.className} text-[#7a7a7a] font-semibold text-xl my-2`}>SINOPSE</h3>
                 <p>{movie.overview}</p>
             </div>
-            <WishListBtn  movie={{id: movie.id, img: movie.backdrop_path, type: "movie"}}/>
+            <WishListBtn  movie={{id: movie.id, img: movie.poster_path, type: "movie", title: movie.title}}/>
         </section>
     )
 }
