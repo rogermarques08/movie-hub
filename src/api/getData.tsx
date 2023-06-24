@@ -46,6 +46,15 @@ export interface CastResponse {
     cast: CastData[]
 }
 
+interface TrailerData {
+    key: string,
+}
+
+export interface TrailerResponse {
+    id: number,
+    results: TrailerData[]
+}
+
 export default async function getData<T>(url: string): Promise<T> {
     const options = {
         method: 'GET',

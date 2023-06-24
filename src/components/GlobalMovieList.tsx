@@ -7,7 +7,7 @@ export default async function GlobalMovieList() {
             <MovieList url="https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1" title="Filmes Mais Bem Avaliados" type="movie" />
             <MovieList url="https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=1" title="Filmes Populares" type="movie" />
             <MovieList url="https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1" title="Próximos Lançametos" type="movie" />
-            <MovieList url="https://api.themoviedb.org/3/tv/top_rated?language=pt-BR&page=1" title="Séries Mais Bem Avaliadas" type="tv" />
+            {/* <MovieList url="https://api.themoviedb.org/3/tv/top_rated?language=pt-BR&page=1" title="Séries Mais Bem Avaliadas" type="tv" /> */}
         </div>
     )
 }

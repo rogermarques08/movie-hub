@@ -35,7 +35,7 @@ function SearchResults({ movies, isListVisible, setListVisible }: SearchResultsP
                                     width={100}
                                     height={150}
                                     priority
-                                    className='rounded-2xl'
+                                    className='fade-intro rounded-2xl'
                                 />
                             </Link>
                         </li>
