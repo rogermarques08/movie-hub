@@ -3,8 +3,6 @@ import getData, { TrailerResponse } from '@/api/getData';
 import YouTube from 'react-youtube';
 import { antonio } from './Logo';
 
-
-
 export default async function MovieTrailer({ movieId }: { movieId: number }) {
     const data = await getData<TrailerResponse>(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
 

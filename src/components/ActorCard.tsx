@@ -1,7 +1,9 @@
+"use client"
 import { CastData } from "@/api/getData";
 import Image from "next/image";
 
-export default function ActorCard({actor}: {actor: CastData}) {
+export default function ActorCard({ actor }: { actor: CastData }) {
+
     return (
         <li key={actor.id} className="flex flex-col w-[80px]">
             <Image

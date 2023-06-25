@@ -12,9 +12,9 @@ export default async function MovieDetails({ params }: { params: { slug: string[
         <main>
             <BannerImage url={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
             <Details movie={movie} />
-            <MovieTrailer movieId={movie.id}/>
-            <CastList url={`https://api.themoviedb.org/3/movie/${movie.id}/credits?language=pt-BR`}/>
-            <RecomendationList url={`https://api.themoviedb.org/3/movie/${movie.id}/recommendations?language=en-US&page=1`}/>
+            <MovieTrailer movieId={movie.id} />
+            <CastList url={`https://api.themoviedb.org/3/movie/${movie.id}/credits?language=pt-BR`} />
+            <RecomendationList url={`https://api.themoviedb.org/3/movie/${movie.id}/recommendations?language=en-US&page=1`} />
         </main>
     )
 }

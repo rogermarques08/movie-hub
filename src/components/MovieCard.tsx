@@ -13,7 +13,7 @@ export default function MovieCard({ movie, type }: MovieCardProps) {
             <Link href={`/media/${type}/${movie.id}`}>
                 <Image
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt={movie.title}
+                    alt={movie.poster_path}
                     width={150}
                     height={200}
                     priority
