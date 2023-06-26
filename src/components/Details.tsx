@@ -2,7 +2,7 @@ import { FilmDataDetails } from "@/api/getData"
 import getRunTime from "@/services/getRunTime"
 import GenresList from "./GenresList"
 import { antonio } from "./Logo"
-import WishListBtn from "./WishListBtn"
+import WatchListBtn from "./WatchListBtn"
 
 interface DetailsProps {
     movie: FilmDataDetails
@@ -20,7 +20,7 @@ export default function Details(props: DetailsProps) {
                 <h3 className={`${antonio.className} text-[#7a7a7a] font-semibold text-xl my-2`}>SINOPSE</h3>
                 <p>{movie.overview || 'O filme não tem descrição'}</p>
             </div>
-            <WishListBtn  movie={{id: movie.id, img: movie.poster_path, type: "movie", title: movie.title}}/>
+            <WatchListBtn movie={{id: movie.id, img: movie.poster_path, type: "movie", title: movie.title}}/>
         </section>
     )
 }

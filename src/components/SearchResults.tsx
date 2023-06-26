@@ -1,8 +1,7 @@
 import { FilmData } from '@/api/getData';
-import Image from 'next/image';
-import Link from 'next/link';
 import { MouseEventHandler, memo } from 'react';
 import { IoMdClose } from 'react-icons/io';
+import Resultcard from './ResultCard';
 
 interface SearchResultsProps {
     movies: FilmData[];
@@ -11,10 +10,10 @@ interface SearchResultsProps {
 }
 
 function SearchResults({ movies, isListVisible, setListVisible }: SearchResultsProps) {
+    
     const handleClick: MouseEventHandler<HTMLLIElement> = () => {
         setListVisible(false);
     };
-
 
     return (
         <>
@@ -28,16 +27,7 @@ function SearchResults({ movies, isListVisible, setListVisible }: SearchResultsP
                     </li>
                     {movies.map((movie) => (
                         <li key={`result-${movie.id}`} onClick={handleClick}>
-                            <Link href={`/media/${movie.media_type}/${movie.id}`} >
-                                <Image
-                                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                    alt={movie.title}
-                                    width={100}
-                                    height={150}
-                                    priority
-                                    className='fade-intro rounded-2xl'
-                                />
-                            </Link>
+                           <Resultcard movie={movie} />
                         </li>
                     ))}
                 </ul>

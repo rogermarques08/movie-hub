@@ -2,11 +2,11 @@
 import useWatchList, { WatchList } from "@/hooks/useWatchList"
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs"
 
-interface WishListBtnnProps {
+interface WatchListBtnProps {
     movie: WatchList
 }
 
-export default function WishListBtn({ movie }: WishListBtnnProps) {
+export default function WatchListBtn({ movie }: WatchListBtnProps) {
     const { addWatchList,watchList, isOnList, removeWatchList } = useWatchList()
 
     return (
