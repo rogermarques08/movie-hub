@@ -56,18 +56,22 @@ export interface TrailerResponse {
 }
 
 export default async function getData<T>(url: string): Promise<T> {
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization:
-                `Bearer ${process.env.API_TOKEN}`,
-        },
-    };
+    try {
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization:
+                    `Bearer ${process.env.API_TOKEN}`,
+            },
+        };
 
-    const response = await fetch(url, options)
-    const data: T = await response.json()
+        const response = await fetch(url, options)
+        const data: T = await response.json()
 
 
-    return data;
+        return data;
+    } catch (error) {
+        throw new Error('Failed to fetch data')
+    }
 }
