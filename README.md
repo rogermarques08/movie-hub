@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align='center'>
+  <h1>Movie Hub</h1>
+  <img src="https://i.ibb.co/kXHKHmp/Captura-de-tela-de-2023-06-27-16-05-53.png"/>
+  <p>Projeto pessoal desenvolvido com o objetivo de aprimorar minhas habilidades com o Framework NextJS onde é possível pesquisar, adicionar em uma lista para "assistir mais tarde" e visualizar todos os detalhes de seus filmes favoritos. </p>
+</div>
+<hr />
 
-## Getting Started
+## :movie_camera:  Teste você mesmo
+- Confira o projeto através <a href="https://movie-hub-chi.vercel.app/">deste link.<a/> 
 
-First, run the development server:
+## :desktop_computer:  Tecnologias
+Para o desenvolvimento utilizei as seguintes tecnologias: 
+- **NextJs** como framework;
+- **TypeScript** como linguagem;
+- **TailwindCSS** para a estilização;
+- **The Movie DB** como <a href="https://developer.themoviedb.org/docs">API.<a/> 
 
-```bash
+
+## :bulb: Teste localmente
+```
+# Clone o repositório
+git clone git@github.com:rogermarques08/movie-hub.git
+# Entre no diretório
+cd movie-hub
+# Instale as dependências
+npm install
+# Inicie o servidor local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<hr />
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align='center'>
+ Desenvolvido por
+  <a href="https://github.com/rogermarques08">Roger Marques<a/>
+ 
+</div>
+ 
